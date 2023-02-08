@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SmartHome 12C</string>
+
+    <string-array name="BoilerSwitchMode">
+        <item>From now</item>
+        <item>From time</item>
+        <item>Until time</item>
+        <item>Remove</item>
+    </string-array>
+
+    <string-array name="BoilerIntervals">
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>75</item>
+        <item>90</item>
+    </string-array>
+
+    <string-array name="RuleMode">
+        <item>single</item>
+        <item>pair</item>
+        <item>temperature</item>
+    </string-array>
+
+    <string-array name="RollerAction">
+        <item>open</item>
+        <item>close</item>
+        <item>open1</item>
+        <item>close1</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtTemperatureTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text="Temperature" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblPolinaDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/lblDianaDate" />
+
+            <TextView
+                android:id="@+id/lblOutsidePressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="47%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/lblPolinaPressure" />
+
+            <TextView
+                android:id="@+id/lblOutsideTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="4.2℃"
+                android:textColor="@color/purple_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/lblPolinaTemp" />
+
+            <TextView
+                android:id="@+id/lblOutsideDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/lblPolinaDate" />
+
+            <TextView
+                android:id="@+id/lblDianaDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/lblBedroomDate" />
+
+            <TextView
+                android:id="@+id/lblBedroomDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/lblLivingDate" />
+
+            <TextView
+                android:id="@+id/lblPolinaPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="36%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/lblDianaPressure" />
+
+            <TextView
+                android:id="@+id/lblBedroomPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="39%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/lblLivingPressure" />
+
+            <TextView
+                android:id="@+id/lblDianaPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="52%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/lblBedroomPressure" />
+
+            <TextView
+                android:id="@+id/lblLivingPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="45%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/lblBasementPressure" />
+
+            <TextView
+                android:id="@+id/lblPolinaTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21.8℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/lblDianaTemp" />
+
+            <TextView
+                android:id="@+id/lblDianaTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="20.7℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/lblBedroomTemp" />
+
+            <TextView
+                android:id="@+id/lblBedroomTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="22.1℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/lblLivingTemp" />
+
+            <TextView
+                android:id="@+id/lblLivingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/lblBasementDate" />
+
+            <TextView
+                android:id="@+id/lblLivingTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="23.6℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/lblBasementTemp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Basement"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.37" />
+
+            <TextView
+                android:id="@+id/lblBasementTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/lblBasementPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="37%"
+                app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.68" />
+
+            <TextView
+                android:id="@+id/lblBasementDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toEndOf="@+id/guideline5" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Living room"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Bedroom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Diana"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Polina"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Outside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/lblOutsideDescr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Clear sky, 1.54 m/s; Sunrise: 06:56; Sunset: 17:28"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edtBoilerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text="Boiler" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblBoilerDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="21/01 15:45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+            <TextView
+                android:id="@+id/lblBoilerOffTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="OFF time: 16:10"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/lblBoilerOnTime" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblBoilerTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="53.4℃"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="Electricity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <Switch
+                android:id="@+id/chkBoilerState"
+                android:layout_width="53dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/lblBoilerTemp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.68" />
+
+            <TextView
+                android:id="@+id/lblBoilerOnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="ON time: 15:40"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblBoilerEnergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Energy: 2356 Wh"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/lblBoilerOffTime" />
+
+            <TextView
+                android:id="@+id/lblBoilerSensorTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Sensor t: 49.2℃"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/lblBoilerEnergy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edtEnergyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text="Energy: now / 30min / today" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblConsumptionNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="3.42 kWh"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/lblProductionNow" />
+
+            <TextView
+                android:id="@+id/lblConsumption30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="3.42 kWh"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="@+id/guideline91"
+                app:layout_constraintTop_toBottomOf="@+id/lblProduction30" />
+
+            <TextView
+                android:id="@+id/lblSelfConsumption30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="3.42 kWh"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="@+id/guideline91"
+                app:layout_constraintTop_toBottomOf="@+id/lblConsumption30" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="54dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="136dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="221dp" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Prod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="Cons"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+            <TextView
+                android:id="@+id/lblProductionNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="12.95 kWh"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblProduction30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="12.95 kWh"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline91"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblProductionToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="12.95 kWh (0.32 E)"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toStartOf="@+id/guideline92"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblConsumptionToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="3.42 kWh"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="@+id/guideline92"
+                app:layout_constraintTop_toBottomOf="@+id/lblProductionToday" />
+
+            <TextView
+                android:id="@+id/lblSelfConsumptionToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="3.42 kWh"
+                android:textColor="@color/design_default_color_error"
+                app:layout_constraintStart_toStartOf="@+id/guideline92"
+                app:layout_constraintTop_toBottomOf="@+id/lblConsumptionToday" />
+
+            <TextView
+                android:id="@+id/lblSelfConsumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="Self-cons"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edtRollersTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text="Rollers" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnPolinaDown"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Down"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <Button
+                android:id="@+id/btnPolinaStop"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textSize="12sp"
+                android:text="Stop"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="@+id/guideline32"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <Button
+                android:id="@+id/btnPolinaUp"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textSize="12sp"
+                android:text="Up"
+                app:layout_constraintEnd_toStartOf="@+id/guideline31"
+                app:layout_constraintStart_toStartOf="@+id/guideline30"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <Button
+                android:id="@+id/btnBedroomDown"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Down"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <Button
+                android:id="@+id/btnBedroomStop"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Stop"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="@+id/guideline32"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <Button
+                android:id="@+id/btnBedroomUp"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Up"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline31"
+                app:layout_constraintStart_toStartOf="@+id/guideline30"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <Button
+                android:id="@+id/btnEG2Down"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Down"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <Button
+                android:id="@+id/btnEG2Stop"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Stop"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="@+id/guideline32"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <Button
+                android:id="@+id/btnEG2Up"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:text="Up"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline31"
+                app:layout_constraintStart_toStartOf="@+id/guideline30"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <Button
+                android:id="@+id/btnEG1Down"
+                android:layout_width="0dp"
+                android:layout_height="46sp"
+                android:text="Down"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnEG1Up"
+                android:layout_width="0dp"
+                android:layout_height="46sp"
+                android:text="Up"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline31"
+                app:layout_constraintStart_toStartOf="@+id/guideline30"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnEG1Stop"
+                android:layout_width="0dp"
+                android:layout_height="46sp"
+                android:text="Stop"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="@+id/guideline32"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblRolloEG2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:text="EG2"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.29" />
+
+            <TextView
+                android:id="@+id/lblRolloEG1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:text="EG1"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="44dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="88dp" />
+
+            <TextView
+                android:id="@+id/lblRolloBedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:text="Bedroom"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="132dp" />
+
+            <TextView
+                android:id="@+id/lblRolloPolina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:text="Polina"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="73dp" />
+
+            <TextView
+                android:id="@+id/lblRolloEG1Proc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="100%"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblRolloEG2Proc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="100%"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <TextView
+                android:id="@+id/lblRolloBedroomProc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="0%"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <TextView
+                android:id="@+id/lblRolloPolinaProc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="50%"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.31" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.52" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.54" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.77" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.98" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

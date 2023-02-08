@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipePlot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtPlotTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text="Title" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/pltAny"
+            android:layout_width="match_parent"
+            android:layout_height="200dip" />
+
+        <TextView
+            android:id="@+id/txtPlotInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info"
+            android:layout_margin="6sp"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/edtPlotHourly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="HOURLY"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlotNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="now"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot24h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="24h"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot48h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="48h"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot72h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="72h"
+                    android:textSize="18dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/edtPlotDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="DAILY"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot7d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="7d"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot14d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="14d"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot30d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="30d"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlotAlld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="all"
+                    android:textSize="18dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/edtPlotMonthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="MONTHLY"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot3m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="3M"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot6m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="6M"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlot12m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="12M"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/edtPlotAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="11dip"
+                    android:text="all"
+                    android:textSize="18dp" />
+
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
